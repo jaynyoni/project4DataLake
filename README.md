@@ -34,6 +34,7 @@ This reduces the number of files that need to be processed and will help with de
 whole S3 bucket.
 
 #Database Purpose and Schema
+
 ##Purpose
 
 1. Enable further ad-hoc analysis by using SQL language thought AWS Athena or AWS Redshift Spectrum
@@ -41,12 +42,12 @@ whole S3 bucket.
 3. Very good query and ETL performance because the data is not big enough
 4. Build a powerful, flexible, and cost effective analytics platform by using Python, SparkSQL and AWS S3.
 
-###Fact Table
+### Fact Table
 
 >songplays: records in event data associated with song plays. This is extracted from both the song_data and log_data 
 > JSON files: songplay_id, start_time, month, year, user_id, level, song_id, artist_id, session_id, location, user_agent
 
-###Dimension Tables
+### Dimension Tables
 
 >- users: users in the app, extracted from the log_data JSON files: user_id, first_name, last_name, gender, level
 >- songs: songs in music database, extracted from the song_data JSON files: song_id, title, artist_id, year, duration
@@ -54,7 +55,7 @@ whole S3 bucket.
 >- time table: timestamps of records in songplays broken down into specific units,  extracted from the log_data 
    > JSON files: start_time, hour, day, week, month, year, weekday
 
-###SparkSQL Temp Tables
+### SparkSQL Temp Tables
 
 I want to store the spark Dataframe as the table and query it. For this purpose, I used createOrReplaceTempView on spark 
 Dataframe.
