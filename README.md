@@ -33,9 +33,9 @@ To test the etl.py script you can replace below variables :
 This reduces the number of files that need to be processed and will help with debugging as it takes long to process the 
 whole S3 bucket.
 
-#Database Purpose and Schema
+# Database Purpose and Schema
 
-##Purpose
+## Purpose
 
 1. Enable further ad-hoc analysis by using SQL language thought AWS Athena or AWS Redshift Spectrum
 2. Structure the JSON data in parquet files making consumption easier and faster
